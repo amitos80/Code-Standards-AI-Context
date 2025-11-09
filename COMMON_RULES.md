@@ -57,6 +57,10 @@ and server (`server/`) components.
 - Build tool: Vite
 - Package manager: pnpm
 
+## AI
+
+- For AI-related development, especially for Retrieval-Augmented Generation (RAG), refer to the chunking strategy guidelines in [CHUNKING.md](./CHUNKING.md).
+
 ## Security
 
 - Use appropriate data types that limit exposure of sensitive information
