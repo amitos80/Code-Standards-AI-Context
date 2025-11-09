@@ -1,10 +1,9 @@
+# AGENTS.md: Project Code Generation Mandate
 # Security Policy
-Thank you for helping us keep our MCP servers secure.
 
-The **reference servers** in this repo are maintained by [Anthropic](https://www.anthropic.com/) as part of the Model Context Protocol project.
 
-The security of our systems and user data is Anthropic’s top priority. We appreciate the work of security researchers acting in good faith in identifying and reporting potential vulnerabilities.
-
-## Vulnerability Disclosure Program
-
-Our Vulnerability Program guidelines are defined on our [HackerOne program page](https://hackerone.com/anthropic-vdp). We ask that any validated vulnerability in this functionality be reported through the [submission form](https://hackerone.com/anthropic-vdp/reports/new?type=team&report_type=vulnerability).
+1. Secret Manager: For all secrets: database passwords, third-party API keys, etc. Your Cloud Run services will be granted secure access at runtime.
+2. IAM (Identity and Access Management): Enforce the Principle of Least Privilege. Services and developers should only have the exact permissions they need.
+3. Cloud Logging & Monitoring: Your eyes and ears. All Cloud Run services automatically stream logs here. Set up dashboards and alerts to monitor application health and performance.
+4. VPC & Serverless VPC Access Connector: This is critical for connecting your Cloud Run service to your Cloud SQL database securely and with low latency over a private network.
+5. Cloud Armor: A Web Application Firewall (WAF) to protect your public-facing frontend from common web attacks and DDoS attempts.
